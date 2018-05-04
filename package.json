@@ -20,6 +20,7 @@
 		"Other"
 	],
 	"activationEvents": [
+		"*",
 		"onCommand:hashtags.find"
 	],
 	"main": "./out/extension",
