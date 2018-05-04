@@ -1,0 +1,68 @@
+{
+	"name": "hashtags",
+	"displayName": "Hashtags",
+	"description": "Hashtags management made simple.",
+	"version": "0.1.0",
+	"publisher": "tomzx",
+	"bugs": {
+		"url": "https://github.com/tomzx/vscode-hashtags/issues"
+	  },
+	  "homepage": "https://github.com/tomzx/vscode-hashtags/blob/master/README.md",
+	  "repository": {
+		"type": "git",
+		"url": "https://github.com/tomzx/vscode-hashtags.git"
+	  },
+	  "license": "MIT",
+	"engines": {
+		"vscode": "^1.23.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:hashtags.find"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"category": "Hashtags",
+				"command": "hashtags.find",
+				"title": "Find tags"
+			}
+		],
+		"configuration": {
+			"title": "Hashtags configuration.",
+			"properties": {
+				"hashtags": {
+					"type": "object",
+					"properties": {
+						"tags": {
+							"type": "array",
+							"description": "List of tags.",
+							"items": {
+								"type": "string",
+								"description": "Tag."
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"package": "vsce package"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"tslint": "^5.8.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	}
+}
