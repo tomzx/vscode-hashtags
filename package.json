@@ -2,6 +2,7 @@
 	"name": "hashtags",
 	"displayName": "Hashtags",
 	"description": "Hashtags management made simple.",
+	"icon": "resources/logo/logo-128x128.png",
 	"version": "0.1.0",
 	"publisher": "tomzx",
 	"bugs": {
